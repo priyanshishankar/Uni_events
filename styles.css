@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Changed font to match login/register */
+}
+
+body {
+    background-color: #c9d6ff; /* Background Color */
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* Gradient effect */
+}
+
+/* Header Style */
+header {
+    background-color: #6c57e2; /* Match the button color in the login page */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333; /* Dark background for nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Form Container */
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.1); /* Soft shadow for depth */
+}
+
+/* Form Layout */
+form {
+    margin: 0 2rem;
+}
+
+/* Form Title */
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #6a4c9c; /* Lavender Color */
+}
+
+/* Input Fields */
+input, select, textarea {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575; /* Light Gray border for inputs */
+    padding-left: 1.5rem;
+    font-size: 15px;
+    margin-bottom: 1.5rem; /* Spacing between inputs */
+}
+
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid hsl(327, 90%, 28%); /* Dark Lavender when focused */
+}
+
+/* Placeholder Text */
+input::placeholder {
+    color: transparent;
+}
+
+/* Input Group for Label and Input */
+.input-group {
+    padding: 1% 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    color: black;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Labels */
+label {
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+/* On Input Focus or Text Entry, Move Label */
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -3em;
+    color: hsl(327, 90%, 28%); /* Dark Lavender when focused */
+    font-size: 15px;
+}
+
+/* Button Style */
+button, .btn {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235); /* Lavender button background */
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+button:hover, .btn:hover {
+    background: #07001f; /* Darker shade on hover */
+}
+
+/* Recover Link */
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(125, 125, 235); /* Light Lavender Link */
+}
+
+.recover a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* 'OR' Divider for Social Media or Alternative Actions */
+.or {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Social Media Icons Style */
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    color: rgb(125, 125, 235); /* Lavender Icons */
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #dfe9f5; /* Light border around icons */
+    margin: 0 15px;
+    transition: 1s;
+}
+
+.icons i:hover {
+    background: #07001f; /* Darker hover effect */
+    font-size: 1.6rem;
+    border: 2px solid rgb(125, 125, 235); /* Highlight icon border on hover */
+}
+
+/* Link Styles (for navigational links or form action links) */
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+}
+
+/* Button Styles for Other Links */
+button {
+    color: rgb(125, 125, 235); /* Light Lavender button color */
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Custom styles for calendar */
+#calendar {
+    width: 100%; /* Ensure it fills the container */
+    min-height: 500px; /* Set a minimum height */
+    margin-top: 20px; /* Add some spacing above */
+}
+
+.fc-header-toolbar {
+    background-color: #6c57e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fc-daygrid-event {
+    background-color: #6c57e2;
+    color: rgb(122, 201, 234);
+    border-radius: 5px;
+}
+
+.fc-daygrid-day-number {
+    font-weight: bold;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    /* Adjust form elements on smaller screens */
+    .form-title {
+        font-size: 1.4rem;
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .input-group {
+        padding: 3% 0; /* Increased padding for better spacing */
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .or {
+        font-size: 1rem;
+    }
+
+    .icons i {
+        font-size: 1.3rem;
+        padding: 0.6rem 1rem;
+    }
+}

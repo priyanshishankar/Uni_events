@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event - University Event Organiser</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="bg-primary text-white p-4">
+        <h1 class="text-center">University Event Organiser</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="new-event.html">New Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registrations.html">Registrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Add New Event</h2>
+        <div class="card shadow-lg p-4 mx-auto" style="max-width: 600px;">
+            <form>
+                <!-- Event Type Dropdown -->
+                <div class="mb-3">
+                    <label for="event-type" class="form-label">Event Type <span class="text-danger">*</span></label>
+                    <select id="event-type" class="form-select" required>
+                        <option value="">Select Event Type</option>
+                        <option value="Conference">Conference</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="Seminar">Seminar</option>
+                        <option value="Festival">Festival</option>
+                    </select>
+                </div>
+
+                <!-- Event Name -->
+                <div class="mb-3">
+                    <label for="event-name" class="form-label">Event Name <span class="text-danger">*</span></label>
+                    <input type="text" id="event-name" class="form-control" placeholder="Enter event name" required>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
+                    <textarea id="description" class="form-control" rows="4" placeholder="Enter event description" required></textarea>
+                </div>
+
+                <!-- Venue -->
+                <div class="mb-3">
+                    <label for="venue" class="form-label">Venue <span class="text-danger">*</span></label>
+                    <input type="text" id="venue" class="form-control" placeholder="Enter event venue" required>
+                </div>
+
+                <!-- Start Date -->
+                <div class="mb-3">
+                    <label for="start-date" class="form-label">Start Date <span class="text-danger">*</span></label>
+                    <input type="date" id="start-date" class="form-control" required>
+                </div>
+
+                <!-- End Date -->
+                <div class="mb-3">
+                    <label for="end-date" class="form-label">End Date <span class="text-danger">*</span></label>
+                    <input type="date" id="end-date" class="form-control" required>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="mb-3">
+                    <label for="event-image" class="form-label">Upload Event Image</label>
+                    <input type="file" id="event-image" class="form-control" accept="image/*">
+                </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Add Event</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 University Event Organiser. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

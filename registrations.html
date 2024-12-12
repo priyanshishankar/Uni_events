@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations - University Event Organizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background color */
+        }
+        .card {
+            background-color: #ffffff; /* White for the card */
+            border: 1px solid #dee2e6; /* Light border for card */
+        }
+        .btn-primary {
+            background-color: #0d6efd; /* Consistent primary color */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0b5ed7; /* Slightly darker hover effect */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white p-4">
+        <h1 class="text-center">University Event Organizer</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="new-event.html">New Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registrations.html">Registrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Event Registration</h2>
+        <div class="card shadow-lg p-4 mx-auto" style="max-width: 600px;">
+            <form id="registration-form">
+                <div class="mb-3">
+                    <label for="registration-date" class="form-label">Registration Date <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="registration-date" name="registration-date" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="event" class="form-label">Event <span class="text-danger">*</span></label>
+                    <select class="form-select" id="event" name="event" required>
+                        <option value="">Select Event</option>
+                        <!-- Events will be dynamically added -->
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subevent" class="form-label">Sub-event</label>
+                    <input type="text" class="form-control" id="subevent" name="subevent" placeholder="Enter sub-event">
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                    <select class="form-select" id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="contact" name="contact" required placeholder="Enter your contact number">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-50">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 University Event Organizer. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External JS -->
+    <script src="main.js"></script>
+</body>
+</html>
